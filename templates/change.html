@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}edit{% endblock %}
+{% block content %}
+  {% for blog in blogs %}
+    <form method="post">
+      博客标题<input type="text" name="title" value="{{ blog.title }}"></p>
+      博客标签<input type="text" name="tag" value="{{ blog.tag }}"></p>
+      分类<select name="classify">
+      <option value="doc">文档</option>
+      <option value="mind">心情</option>
+      <option value="soft">软件</option>
+      <option value="book">读书</option>
+      <option value="novel">小说</option>
+      <option value="movie">电影</option>
+    </select>
+
+      <p></p>
+      状态<select name="status">
+      <option value="1">显示</option>
+      <option value="0">不显示</option>
+    </select>
+
+      <textarea name="content_md" rows="10" cols="70%" placeholder="支持markdown编辑">{{ blog.content_md }}</textarea>
+
+      <p></p>
+      <input type="text" name="img" value="{{ blog.img }}"></p>
+      <input type="submit">
+    </form>
+  {% endfor %}
+{% endblock %}

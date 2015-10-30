@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+ {% block title %}
+{{blog['title']}}
+{% end %}
+
+{% block content%}
+        {% if  blog['status']=="1" %}
+        <p>{{ blog['time']}}</p>
+        <p>{{ blog['title'] }}</p>
+
+        <p>{{ blog['tag'] }}</p>
+        <p>{{blog['content']}}</p>
+        <p><img src="{{blog['img_link']}}" width="128" height="128"/></p>
+         <hr/>
+        {% end %}
+{% end %}

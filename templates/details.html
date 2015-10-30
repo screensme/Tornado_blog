@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+ {% block title %}
+Home
+{% end %}
+
+{% block content %}
+    {% for blog in blogs %}
+        <p>{{ blog['time']}}</p>
+        <p><a href="/home/blog?title={{blog['title']}}&&content={{blog['content']}}" >{{ blog['title'] }}</a></p>
+        {{blog['content']}}
+<hr/>
+    {% end %}
+{% end %}

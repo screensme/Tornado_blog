@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Home{% end %}
+{% block content %}
+    {% for blog in blogs %}
+    <div class="panel panel-default">
+<div class="blog-title"><a href="blog">{{blog['title']}}</a></div>
+<article class="blog-content">
+<div class="tags-categorys">
+<div class="blog-date"></div>
+
+<div class="content-html"><a href="blog">
+<p>{{blog['content']}}</p>
+</a></div>
+<div class="tag-category">
+# date: {{blog['time']}}
+</div>
+
+<div class="tag-category">
+# tag:{{blog['tag']}}
+</div>
+<div class="tag-category">
+<!--# category: {{blog['category']}}  -->
+</div>
+</div>
+</article>
+</div>
+    {% end %}
+{% end %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

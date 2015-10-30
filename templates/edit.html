@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% block title %}Edit Blog{% end %}
+{% block content %}
+  <form action="edit" method="post" enctype="multipart/form-data"
+ >
+    博客标题<input type="text" name="title"></p>
+    博客标签<input type="text" name="tag"></p>
+    分类<select name="classify">
+
+    <option value="编程">编程</option>
+    <option value="读书">读书</option>
+    <option value="小说">小说</option>
+    <option value="电影">电影</option>
+  </select>
+    <p></p>
+    状态<select name="status">
+    <option value="1">显示</option>
+    <option value="0">不显示</option>
+  </select>
+    <textarea name="content" rows="10" cols="70%" placeholder="支持markdown编辑"></textarea>
+    <p></p>
+ <!--  <form action="#" enctype="mutilpart/form-data" method="post">  -->
+       <input type="file" name="img" />
+ <!--   <button type="submit">Upload</button>  -->
+   <!-- </form>  -->
+ <button type="submit">upload</button>
+  </form>
+{% end %}
